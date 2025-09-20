@@ -1,0 +1,33 @@
+name: Make AppImage
+
+on:
+  push:
+    branches:
+      - master
+  # 手動トリガーを許可
+  workflow_dispatch:
+
+
+jobs:
+  publish-release-page:
+    name: Publish Release Page
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Extract version from configure.ac
+        id: get_version
+        run: |
+          $version = Select-String -Path configure.ac -Pattern 'AC_INIT\(hengband, (.+?)\)' | ForEach-Object { $_.Matches.Groups[1].Value }
+          echo "version=$version" >> $Env:GITHUB_OUTPUT
+
+      - uses: actions/checkout@v2
+      - name: Build AppImage
+        uses: valicm/appimage-bash@v1.3
+        with:
+          version_url: 'https://github.com/hengband/hengband/archive/refs/tags/*-Beta.tar.gz'
+          version_file: 'app/resources/app/package.json'
+          version_bash: 'jq -r .version'
+          version_icon: '~\hengband\src\angband.ico'

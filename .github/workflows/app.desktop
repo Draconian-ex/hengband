@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=hengband
+Exec=hengband
+Icon=~\hengband\src\angband.ico
+Categories=Utility;
+VersionUrl=https://github.com/hengband/hengband/archive/refs/tags/*-Beta.tar.gz
+VersionFile=package.json
+VersionIcon=icon.png
+VersionBash=jq -r .version
