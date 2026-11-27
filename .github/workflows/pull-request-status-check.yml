@@ -6,6 +6,7 @@ on:
 
   # 手動トリガーを許可
   workflow_dispatch:
+  push:
 
 permissions:
   contents: read

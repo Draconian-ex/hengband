@@ -12,6 +12,7 @@ on:
       - src/**
       - lib/**/Makefile.am
   workflow_dispatch:
+  push:
   # リリースのワークフローなどから呼べるようにする
   workflow_call:
 
