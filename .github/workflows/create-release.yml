@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - ci-test/release-linux-fail
   # 手動トリガーを許可
   workflow_dispatch:
 

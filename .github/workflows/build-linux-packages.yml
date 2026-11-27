@@ -39,6 +39,9 @@ jobs:
           persist-credentials: false
 
       # タイルだけを使う。Visual Studio 用の libcurl は要らない
+      - name: (テスト用) わざと失敗させる
+        run: exit 1
+
       - name: Checkout lib/xtra
         run: git submodule update --init --depth 1 lib/xtra
 
