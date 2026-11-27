@@ -83,7 +83,7 @@ See `./configure --help` for more information about changing the installation lo
 
 ### Configuring display
 
-When the game is built with Xft, TrueType fonts are used by default. The default fonts of the English version are `monospace-24:lang=en:spacing=90` for the main window and `sans-serif-16:lang=en` for the sub windows.
+When the game is built with Xft, TrueType fonts are used by default. The default fonts of the English version are `monospace-18:lang=en:spacing=90` for the main window and `sans-serif-12:lang=en` for the sub windows.
 
 With `-- -fb`, or when the game is built without Xft, bitmap fonts are used. The default fonts of the English version are `-*-*-medium-r-normal--24-*-*-*-*-*-iso8859-1` for the main window and `-*-*-medium-r-normal--16-*-*-*-*-*-iso8859-1` for the sub windows.
 

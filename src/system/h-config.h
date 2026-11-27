@@ -58,11 +58,11 @@ constexpr auto MAINTAINER = "echizen@users.sourceforge.jp";
   
   #ifdef USE_XFT
     #ifdef JP
-      #define DEFAULT_X11_FONT_TRUETYPE "monospace-24:lang=ja:spacing=90"
-      #define DEFAULT_X11_FONT_TRUETYPE_SUB "sans-serif-16:lang=ja"
+      #define DEFAULT_X11_FONT_TRUETYPE "monospace-18:lang=ja:spacing=90"
+      #define DEFAULT_X11_FONT_TRUETYPE_SUB "sans-serif-12:lang=ja"
     #else
-      #define DEFAULT_X11_FONT_TRUETYPE "monospace-24:lang=en:spacing=90"
-      #define DEFAULT_X11_FONT_TRUETYPE_SUB "sans-serif-16:lang=en"
+      #define DEFAULT_X11_FONT_TRUETYPE "monospace-18:lang=en:spacing=90"
+      #define DEFAULT_X11_FONT_TRUETYPE_SUB "sans-serif-12:lang=en"
     #endif
   #endif
   
